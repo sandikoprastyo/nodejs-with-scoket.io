@@ -1,7 +1,9 @@
 <html>
 
 <head>
+    <script src="/socket.io/socket.io.js"></script>
     <script>
+        /*    //websocket
         let HOST = location.origin.replace(/^http/, 'ws')
         let ws = new WebSocket(HOST);
         let el;
@@ -9,7 +11,17 @@
         ws.onmessage = (event) => {
             el = document.getElementById('server-time');
             el.innerHTML = 'Server time: ' + event.data;
-        };
+        }; */
+
+
+        //socket.io
+        var socket = io();
+        var el;
+
+        socket.on('time', function (timeString) {
+            el = document.getElementById('server-time')
+            el.innerHTML = 'Server time: ' + timeString;
+        });
     </script>
 </head>
 
