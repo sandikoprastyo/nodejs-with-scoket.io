@@ -3,18 +3,19 @@
 <head>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        /*    //websocket
-        let HOST = location.origin.replace(/^http/, 'ws')
-        let ws = new WebSocket(HOST);
-        let el;
+        // opsi 1 websocket
+        /*  
+         let HOST = location.origin.replace(/^http/, 'ws')
+         let ws = new WebSocket(HOST);
+         let el;
 
-        ws.onmessage = (event) => {
-            el = document.getElementById('server-time');
-            el.innerHTML = 'Server time: ' + event.data;
-        }; */
+         ws.onmessage = (event) => {
+             el = document.getElementById('server-time');
+             el.innerHTML = 'Server time: ' + event.data;
+         }; */
 
 
-        //socket.io
+        // opsi 2 socket.io
         var socket = io();
         var el;
 
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-    <p id="server-time"></p>
+    <h1 id="server-time"></h1>
 </body>
 
 </html>

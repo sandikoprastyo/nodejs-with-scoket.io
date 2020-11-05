@@ -13,7 +13,7 @@ const server = express()
     console.log('====================================');
   });
 
-//server websocket
+//opsi 1 server websocket
 /* const { Server } = require('ws');
 const wss = new Server({ server });
 
@@ -29,7 +29,7 @@ setInterval(() => {
 }, 1000);
  */
 
-//server socket.io
+// opsi 2 server socket.io
 const io = socketIO(server);
 
 io.on('connection', (socket) => {
